@@ -1,0 +1,9 @@
+crowd:
+  # if developing locally, it's much faster to skip the atlassian download.
+  # Put your atlassian-jira.tar.gz in salt/jira/, and uncomment this:
+  # source_url: salt://jira
+  source_hash: md5=30be42ed2e222608c3486e149e7ebfb5 
+  version: 2.8.3 
+
+  jvm_Xms: 768m
+  jvm_Xmx: 768m
