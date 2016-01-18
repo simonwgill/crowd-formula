@@ -18,7 +18,9 @@ JVM_MAXIMUM_MEMORY="{{ crowd.jvm_Xmx }}"
 #
 # The following are the required arguments for CROWD.
 #
-JVM_REQUIRED_ARGS='-Djava.awt.headless=true -Datlassian.standalone=JIRA -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true -Dmail.mime.decodeparameters=true -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory -Djava.net.preferIPv4Stack=true'
+#JVM_REQUIRED_ARGS='-Djava.awt.headless=true -Datlassian.standalone=JIRA -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true -Dmail.mime.decodeparameters=true -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory 
+
+JAVA_OPTS="-XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Dfile.encoding=UTF-8 $JAVA_OPTS"
 
 # Uncomment this setting if you want to import data without notifications
 #

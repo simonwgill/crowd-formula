@@ -95,21 +95,6 @@ crowd-init-script:
       crowd: {{ crowd|json }}
 
 ### FILES ###
-{{ crowd.home }}/crowd-config.properties:
-  file.managed:
-    - source: salt://crowd/templates/crowd-config.properties.tmpl
-    - user: {{ crowd.user }}
-    - template: jinja
-    - listen_in:
-      - module: crowd-restart
-
-{{ crowd.home }}/dbconfig.xml:
-  file.managed:
-    - source: salt://crowd/templates/dbconfig.xml.tmpl
-    - user: {{ crowd.user }}
-    - template: jinja
-    - listen_in:
-      - module: crowd-restart
 
 {{ crowd.prefix }}/crowd/crowd-webapp/WEB-INF/classes/crowd-init.properties:
   file.managed:
